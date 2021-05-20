@@ -1,1 +1,1 @@
-pip install flask, argparse, psycopg2, sshtunnel
+pip3 install Flask argparse psycopg2-binary sshtunnel
