@@ -1,7 +1,7 @@
 from functools import wraps
 from app import logger
 from app.tools.log_message_halper import log_msg, log_request_msg
-from flask import request
+from flask import request, Response
 
 
 def default_exception_handler(func):
@@ -35,3 +35,8 @@ def decorator_request(func):
             )
             return '', 500
     return _wrapper
+
+
+def system_response(result='{"result": "The request was processed successfully"}', res_status=200,
+                    res_mimetype="application/json;  charset=utf-8"):
+    return Response(response=result, status=res_status, mimetype=res_mimetype)
