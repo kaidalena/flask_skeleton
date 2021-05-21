@@ -51,7 +51,7 @@
   cd "$project_dir"
 # клонирование только ветки dev
   git init
-  git remote add origin git@github.com:kaidalena/flask_skeleton.git
+  git remote add origin https://github.com/kaidalena/flask_skeleton.git
   git pull origin main
 
   cd "$chdir$project_dir"
